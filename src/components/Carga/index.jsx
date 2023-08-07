@@ -21,8 +21,8 @@ export function Carga() {
       <form action="" className="carga">
         <input type="file" name="" id="" onChange={(e)=>setFile(e.target.files[0])}/>
         <input type="submit" value="Enviar" onClick={(e)=>{
-          e.preventDefault(),
-          handlePost()
+          e.preventDefault();
+          handlePost();
         }}/>
       </form>
       <div className="carga__container">
