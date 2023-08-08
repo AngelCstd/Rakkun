@@ -14,6 +14,7 @@ export function Carga() {
       );
     let json = await data.json()
     console.log(json)
+    setUrl(json.url)
   };
 
   return (
