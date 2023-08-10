@@ -16,12 +16,12 @@ export const HeaderNav = () => {
                 <div className={menuVisible === false ? "menu__icon" : "menu__icon close"}></div>
                 <div className="menu__icon menu__hidden"></div>
             </div>
-            <nav className={menuVisible === false ? "header__nav" : "nav__active header__nav"}>
+            <nav onClick={handleVisible} className={menuVisible === false ? "header__nav" : "nav__active header__nav"}>
                 <ul className="header__ul" >
                     <li className="header__item--title">
                         <h1>Rakuun</h1>
                     </li>
-                    <li className="header__item">
+                    <li className="header__item" onClick={handleVisible}>
                         <a href="/collares">Collares</a>
                     </li>
                     <li className="header__item">
