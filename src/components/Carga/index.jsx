@@ -7,14 +7,20 @@ export function Carga() {
   async function handlePost(){
     const formData = new FormData();
     formData.append('image', file, file.name);
-    let data = await fetch("https://obtencion-imagenes-back.vercel.app/", 
-    {
-    method: 'POST',
-      body: formData}
-      );
-    let json = await data.json()
+    try {
+      let data = await fetch("https://obtencion-imagenes-back.vercel.app/", 
+      {
+      method: 'POST',
+        body: formData
+      });
+          let json = await data.json()
     console.log(json)
     setUrl(json.url)
+    } catch (error) {
+      alert(error)
+    }
+   
+
   };
 
   return (

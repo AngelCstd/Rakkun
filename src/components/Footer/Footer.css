@@ -1,0 +1,6 @@
+footer{
+    background-color: aliceblue;
+}
+.footer__ul{
+    display: flex;
+}
