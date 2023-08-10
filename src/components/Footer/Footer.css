@@ -1,6 +1,19 @@
-footer{
-    background-color: aliceblue;
+.footer{
+    background-color: var(--background-dark);
+    height: 4rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .footer__ul{
     display: flex;
+    gap: 1rem;
+}
+.footer__ul li{
+    list-style: none;
+}
+.footer img{
+    width: 20px;
 }
