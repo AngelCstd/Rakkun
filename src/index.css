@@ -2,6 +2,7 @@
     --background-dark: #087b56;
     --background-light: #10b384;
     --font: #e4e4e4;
+    --font-dark: #181818;
 }
 html{
     font-size: 16px;

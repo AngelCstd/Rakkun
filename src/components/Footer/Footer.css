@@ -14,6 +14,13 @@
 .footer__ul li{
     list-style: none;
 }
-.footer img{
+.footer .instagram{
     width: 20px;
+    height: 20px;
+    fill: var(--font);
+}
+.footer .tiktok{
+    width: 20px;
+    height: 20px;
+    fill: var(--font);
 }
