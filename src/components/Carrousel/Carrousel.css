@@ -1,9 +1,20 @@
 .carrousel__ul {
-    display: flex;
+    display: flex; 
     overflow-x: scroll;
     padding: 1rem;
+    position: relative;
 }
-
+@keyframes smoothScroll {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateX(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 .carrousel__li {
     list-style: none;
     margin: 0;
@@ -11,16 +22,15 @@
     display: inline-block;
     position: relative;
     margin-right: 20px;
+    animation: smoothScroll 2s ease-out;
 }
-
 .carrousel__link {
     text-decoration: none;
     color: #333;
     display: block;
 }
-
 .carrousel__img {
-    width: 45vw;
+    width: 40vw;
     max-width: 180px;
     height: 60vw;
     max-height: 240px;
@@ -38,7 +48,6 @@
     padding: 10px 15px;
     border-radius: 0px 0px 8px 0px;
 }
-
 .carrousel__title {
     font-size: 1rem;
     /* Ajusta el tamaño del título */
