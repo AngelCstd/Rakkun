@@ -1,14 +1,47 @@
-.carrousel__ul{
+.carrousel__ul {
     display: flex;
     overflow-x: scroll;
-    column-gap: 1rem;
+    padding: 1rem;
 }
-.carrousel__li{
+
+.carrousel__li {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    margin-right: 20px;
 }
-.carrousel__img{
-    width: 240px;
-    height: 320px;
-    object-position: center;
+
+.carrousel__link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.carrousel__img {
+    width: 45vw;
+    max-width: 300px;
+    height: 60vw;
+    max-height: 400px;
     object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.167);
+}
+
+.carrousel__container {
+    position: absolute;
+    bottom: 4px;
+    right: 0px;
+    background-color: var(--background-dark-opacity);
+    padding: 10px 15px;
+    border-radius: 0px 0px 8px 0px;
+}
+
+.carrousel__title {
+    font-size: 1rem;
+    /* Ajusta el tamaño del título */
+    margin: 0;
+    color: var(--font);
 }

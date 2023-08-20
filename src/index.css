@@ -1,7 +1,8 @@
 :root{
+    --background-dark-opacity: #087b57be;
     --background-dark: #087b56;
     --background-light: #10b384;
-    --font: #e4e4e4;
+    --font: #f0eeee;
     --font-dark: #181818;
 }
 html{
