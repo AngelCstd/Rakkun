@@ -11,7 +11,9 @@ export const HeaderNav = ({categorias}) => {
 
     return (
         <header className="header">
+            <Link className="header__title" to="/">
             <h1>Rakuun</h1>
+            </Link>
             <div className={menuVisible === false ? "header__menu" : "header__menu close__menu"} onClick={handleVisible}>
                 <div className="menu__icon menu__hidden"></div>
                 <div className={menuVisible === false ? "menu__icon" : "menu__icon close"}></div>
