@@ -6,10 +6,10 @@ export function Footer() {
         <footer className="footer" >
             <ul className="footer__ul">
                 <li className="footer__item">
-                    <a href="https://www.instagram.com/_rakuun_/" target="_blank"><Instagram/> </a>
+                    <a href="https://www.instagram.com/_rakuun_/" target="_blank" rel="noreferrer"><Instagram/></a>
                 </li>
                 <li className="footer__item">
-                    <a href="https://www.tiktok.com/@eli_cstcc" target="_blank"><Tiktok/> </a>
+                    <a href="https://www.tiktok.com/@eli_cstcc" target="_blank" rel="noreferrer"><Tiktok/></a>
 
                 </li>
             </ul>

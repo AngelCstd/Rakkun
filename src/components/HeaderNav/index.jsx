@@ -1,7 +1,8 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 import "./HeaderNav.css"
 
-export const HeaderNav = () => {
+export const HeaderNav = ({categorias}) => {
     const [menuVisible, setMenuVisible] = useState(false)
 
     const handleVisible = () => {
@@ -21,15 +22,11 @@ export const HeaderNav = () => {
                     <li className="header__item--title">
                         <h1>Rakuun</h1>
                     </li>
-                    <li className="header__item" onClick={handleVisible}>
-                        <a href="/collares">Collares</a>
-                    </li>
-                    <li className="header__item">
-                        <a href="/pulseras">Pulseras</a>
-                    </li>
-                    <li className="header__item">
-                        <a href="/anillos">Anillos</a>
-                    </li>
+                    {categorias.map(({category})=>{
+                        return(<li key={Math.random()*1000} className="header__item" onClick={handleVisible}>
+                        <Link to={"/" + category}>{category}</Link>
+                    </li>)
+                    })}
                 </ul>
             </nav>
         </header>

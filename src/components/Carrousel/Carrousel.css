@@ -1,0 +1,14 @@
+.carrousel__ul{
+    display: flex;
+    overflow-x: scroll;
+    column-gap: 1rem;
+}
+.carrousel__li{
+    list-style: none;
+}
+.carrousel__img{
+    width: 240px;
+    height: 320px;
+    object-position: center;
+    object-fit: cover;
+}

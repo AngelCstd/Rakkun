@@ -4,29 +4,33 @@ import { Inicio } from "./components/Inicio";
 import { Carga } from "./components/Carga";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
+import { fetchNotion, KEY_END_POINT } from "./helpers/fetch";
 
 
 function App() {
-  const [dataHeader, setDataHeader] = useState({})
+  const [categorias, setCategorias] = useState([])
 
 useEffect(()=>{
  async function fetchDataHeader() {
   try {
-    const data = await fetch("https://obtencion-imagenes-back.vercel.app/notion")
-    setDataHeader(data)
+    const data = await fetchNotion(KEY_END_POINT.KEY_ESPECIAL, "Categoria")
+    setCategorias(data)
   } catch (error) {
     console.log(error)
   }
  }
  fetchDataHeader()
- console.log(dataHeader)
 },[])
+
+useEffect(()=>{
+  console.log(categorias)
+},[categorias])
 
   return (
     <BrowserRouter>
-      <HeaderNav />
+      <HeaderNav categorias={categorias} />
       <Routes>
-        <Route path="/" element={<Inicio />} />
+        <Route path="/" element={<Inicio categorias={categorias}/>} />
         <Route path="/__log" element={<Carga />} />
       </Routes>
       <Footer />

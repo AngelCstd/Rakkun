@@ -3,10 +3,10 @@ import { MostView } from "../MostView"
 import "./Inicio.css"
 
 
-export function Inicio(){
+export function Inicio({categorias}){
     return(
         <section>
-        <Carrousel/>
+        <Carrousel categorias={categorias} />
         <MostView/>
         </section>
     )
