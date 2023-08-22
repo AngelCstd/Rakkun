@@ -54,3 +54,9 @@
     margin: 0;
     color: var(--font);
 }
+@media (width > 760px ){
+    .carrousel__ul{
+        justify-content: space-around;
+        overflow-x: auto;
+    }
+}

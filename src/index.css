@@ -16,6 +16,8 @@ html{
 }
 body{
     overflow-x: hidden;
+    min-height: 100dvh;
+    position: relative;
 }
 a{
     text-decoration: none;

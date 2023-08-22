@@ -5,6 +5,7 @@ import { Carga } from "./components/Carga";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import { fetchNotion, KEY_END_POINT } from "./helpers/fetch";
+import { Category } from "./components/Category";
 
 
 function App() {
@@ -32,6 +33,7 @@ useEffect(()=>{
       <Routes>
         <Route path="/" element={<Inicio categorias={categorias}/>} />
         <Route path="/__log" element={<Carga />} />
+        <Route path="/category/:category" element={<Category/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

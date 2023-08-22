@@ -12,7 +12,7 @@ export const HeaderNav = ({categorias}) => {
     return (
         <header className="header">
             <Link className="header__title" to="/">
-            <h1>Rakuun</h1>
+            <h1>Rakun</h1>
             </Link>
             <div className={menuVisible === false ? "header__menu" : "header__menu close__menu"} onClick={handleVisible}>
                 <div className="menu__icon menu__hidden"></div>
@@ -22,11 +22,11 @@ export const HeaderNav = ({categorias}) => {
             <nav onClick={handleVisible} className={menuVisible === false ? "header__nav" : "nav__active header__nav"}>
                 <ul className="header__ul" >
                     <li className="header__item--title">
-                        <h1>Rakuun</h1>
+                        <h1>Rakun</h1>
                     </li>
                     {categorias.map(({category})=>{
                         return(<li key={Math.random()*1000} className="header__item" onClick={handleVisible}>
-                        <Link to={"/" + category}>{category}</Link>
+                        <Link to={"/category/" + category}>{category}</Link>
                     </li>)
                     })}
                 </ul>

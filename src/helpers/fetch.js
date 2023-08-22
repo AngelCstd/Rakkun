@@ -8,7 +8,9 @@ export const KEY_END_POINT = {
 
 export const fetchNotion = async (key, value) =>{
     let data = await fetch(`https://obtencion-imagenes-back.vercel.app/notion?filterBy=${value}&key=${key}`)
-    .then(res => res.json())
+    .then(res=>res.json())
+    .catch(error => console.log(error))
+
     let response = data.map(({properties})=>{
         let {ID, Agotado, Categoria, Descripcion,Especial, Imagen, Medidas, Nombre, Comprados } = properties
         return {

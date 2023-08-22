@@ -1,0 +1,19 @@
+.productCard{
+    width: 45%;
+    max-width: 180px;
+    border: 1px solid black;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.productCard img{
+    width: 100%;
+    height: 60vw;
+    max-height: 240px;
+    object-position: center;
+    object-fit: cover;
+}
+.productCard__container{
+    height: 5ch;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
