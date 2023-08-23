@@ -25,9 +25,8 @@ export function Category() {
             <h2>{parametros.category}</h2>
             <div className="category__container">
             {productos.map((producto)=> <ProductCard producto={producto} /> )}
-            {productos.map((producto)=> <ProductCard producto={producto} /> )}
-            {productos.map((producto)=> <ProductCard producto={producto} /> )}
-            {productos.map((producto)=> <ProductCard producto={producto} /> )}
+            
+            
             </div>
         </section>
     )
