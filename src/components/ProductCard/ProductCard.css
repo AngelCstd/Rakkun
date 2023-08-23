@@ -29,3 +29,11 @@
     color: rgb(95, 95, 95);
     font-weight: 500;
 }
+@media (width > 480px ){
+    .productCard{
+        max-width: 150px;
+    }
+    .productCard img{
+        max-height: 200px;
+    }
+}
