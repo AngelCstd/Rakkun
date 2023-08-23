@@ -1,6 +1,7 @@
 .category{
     text-align: center;
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
+    min-height: calc(100dvh - 110px);
 }
 .category h2{
     margin-bottom: 1rem;

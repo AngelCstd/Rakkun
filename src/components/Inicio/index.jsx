@@ -5,7 +5,7 @@ import "./Inicio.css"
 
 export function Inicio({categorias}){
     return(
-        <section>
+        <section className="main__section">
         <Carrousel categorias={categorias} />
         <MostView/>
         </section>

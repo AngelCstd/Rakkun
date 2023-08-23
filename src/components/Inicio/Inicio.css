@@ -1,0 +1,3 @@
+.main__section{
+    min-height: calc(100dvh - 110px);
+}
