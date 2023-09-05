@@ -13,7 +13,6 @@ export function Category() {
             try {
                 const data = await fetchNotion(KEY_END_POINT.KEY_CATEGORIA, parametros.category)
                 setProductos(data)
-                console.log(data)
             } catch (error) {
                 console.log(error)
             }
