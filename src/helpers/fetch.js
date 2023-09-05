@@ -19,7 +19,7 @@ export const fetchNotion = async (key, value) =>{
             desc: Descripcion.rich_text.length===0 ? "": Descripcion.rich_text[0].plain_text,
             img: Imagen.rich_text.length===0 ? "": Imagen.rich_text[0].plain_text,
             category: Categoria.select.name,
-            medidas: Medidas.multi_select,
+            medidas: Medidas.multi_select.length === 0 ? false : Medidas.multi_select,
             especial: Especial.select?Especial.select.name : "",
             agotado: Agotado.checkbox,
             comprados: Comprados.checkbox

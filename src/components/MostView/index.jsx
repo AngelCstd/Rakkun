@@ -23,7 +23,7 @@ export function MostView(){
         <section className="mostview" >
             <h2>Mas vistos</h2>
             <div className="category__container">
-            {most.map((producto)=> <ProductCard producto={producto} /> )}
+            {most.map((producto)=> <ProductCard key={producto.id} producto={producto} /> )}
             </div>
         </section>
     )

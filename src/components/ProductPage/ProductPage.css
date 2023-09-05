@@ -1,0 +1,23 @@
+.productPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+section.productPage img{
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+}
+.productPage h3{
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin: .5rem 0;
+}
+.productPage p{
+    font-size: .9rem;
+    color: rgb(40, 40, 40);
+}
+.productPage__container--mostview{
+    margin-top: 2rem;
+}
