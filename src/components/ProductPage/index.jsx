@@ -7,7 +7,6 @@ import { MostView } from "../MostView"
 export function ProductPage() {
     const [dataId, setDataID] = useState([])
     const {id} = useParams()
-
     useEffect(() => {
         async function fetchDataId() {
             try {
@@ -19,7 +18,7 @@ export function ProductPage() {
             }
         }
         fetchDataId()
-    }, [])
+    }, [id])
 
     return(
         <section className="productPage" >
@@ -31,9 +30,7 @@ export function ProductPage() {
                 
                 </div>
             </div>
-            <div className="productPage__container--mostview">
             <MostView/>
-            </div>
         </section>
     )
 }
