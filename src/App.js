@@ -16,7 +16,19 @@ useEffect(()=>{
  async function fetchDataHeader() {
   try {
     const data = await fetchNotion(KEY_END_POINT.KEY_ESPECIAL, "Categoria")
-    setCategorias(data)
+    let result = data.sort((a, b)=>{
+      const nameA = a.category
+      const nameB = b.category
+      if (nameA < nameB) {
+        return -1
+      }
+      if (nameA > nameB) {
+        return 1
+      }
+      return 0
+    })
+    console.log(data)
+    setCategorias(result)
   } catch (error) {
     console.log(error)
   }
