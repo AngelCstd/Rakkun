@@ -4,9 +4,12 @@ section.mostview{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100%; 
     gap: 1rem;
 }
 section.mostview h2{
     color: var(--background-dark);
+}
+.category__container{
+    width: 100%;
 }

@@ -12,17 +12,16 @@ export function ProductPage() {
             try {
                 const data = await fetchNotion(KEY_END_POINT.KEY_ID , id)
                 setDataID(data[0])
-                console.log(data[0])
             } catch (error) {
                 console.log(error)
             }
-        }
+        } 
         fetchDataId()
     }, [id])
 
     return(
         <section className="productPage" >
-            <img src={dataId.img} alt="" />
+            <img src={dataId.img} alt="" className="productPage__img" />
             <div className="productPage__container">
                 <h3>{dataId.nombre}</h3>
                 <p>{dataId.desc}</p>
@@ -30,7 +29,7 @@ export function ProductPage() {
                 
                 </div>
             </div>
-            <MostView/>
+            <MostView repeatId={id} />
         </section>
     )
 }

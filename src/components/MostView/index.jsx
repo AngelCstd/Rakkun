@@ -3,15 +3,15 @@ import React, { useState, useEffect } from 'react';
 import { KEY_END_POINT, fetchNotion } from "../../helpers/fetch";
 import { ProductCard } from "../ProductCard";
 
-export function MostView(){
+export function MostView({repeatId}){
     const [most, setMost] = useState([])
 
     useEffect(() => {
         async function fetchDataCategory() {
             try {
                 const data = await fetchNotion(KEY_END_POINT.KEY_COMPRADOS, true)
-                setMost(data)
-                console.log(data)
+                let result = data.filter(item => item.id != repeatId)
+                setMost(result)
             } catch (error) {
                 console.log(error)
             }

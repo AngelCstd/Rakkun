@@ -24,9 +24,6 @@ useEffect(()=>{
  fetchDataHeader()
 },[])
 
-useEffect(()=>{
-  console.log(categorias)
-},[categorias])
 
   return (
     <BrowserRouter>
